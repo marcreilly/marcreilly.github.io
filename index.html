@@ -1,9 +1,122 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+<title>Tell the duck your problems, maybe that will help!</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+}
+
+.main-title {
+  padding-left: 100px;
+}
+
+.header {
+  background-color: #fff;
+  padding-left: 100px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.row {
+  display: -webkit-flex;
+  display: flex;
+}
+
+.column {
+  padding: 10px;
+}
+
+.column.leftside {
+   -webkit-flex: 1;
+   -ms-flex: 1;
+   flex: 1;
+   padding-left: 40px;
+}
+
+.column.middle {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.column.rightside {
+   -webkit-flex: 3;
+   -ms-flex: 3;
+   flex: 3;
+   padding-left: 30px;
+}
+
+.footer {
+  background-color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .row {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+  .duck-img {
+    max-height: 200px;
+  }
+}
+
+.duck-img {
+  max-width: 400px;
+}
+
+.main-text {
+  height: 60%;
+}
+
+textarea {
+ width: 80%;
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ box-sizing: border-box;
+ padding: 10px;
+
+     -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+</style>
 </head>
-
 <body>
-Test
-</body>
 
+<h2 class="main-title">What's the problem?</h2>
+
+<div class="header">
+  <p><i>Tell Ducky your problem, and maybe that will help you figure it out.</i></p>
+</div>
+
+<div class="row">
+  <div class="column leftside" style="background-color:#fff;">
+  <p><strong>Meet Ducky.</strong></p>
+  <p>He doesn't say much but he's good at listening.</p>
+  </div>
+  <div class="column middle" style="background-color:#fff;">
+    <img class="duck-img" src="rubber_duck.jpg">
+  </div>
+  <div class="column rightside" style="background-color:#fff;">
+  <textarea class="main-text" placeholder="Tell me what you're stuck on">
+  </textarea>
+ </div>
+</div>
+
+<div class="footer">
+  <p>Other ideas:</p>
+</div>
+
+</body>
 </html>
